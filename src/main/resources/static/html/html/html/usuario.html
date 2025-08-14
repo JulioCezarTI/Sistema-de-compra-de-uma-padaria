@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Cadastro de Usuário</title>
+    <style>
+        body {
+            background-color: #f1f1f1;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: #fff;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            width: 400px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 15px;
+            color: #555;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            font-size: 15px;
+        }
+
+        button {
+            background-color: #0077cc;
+            color: white;
+            border: none;
+            margin-top: 20px;
+            padding: 12px;
+            width: 100%;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #005fa3;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>👤 Cadastro de Usuário</h2>
+    <label for="nome">📝 Nome:</label>
+    <input id="nome" placeholder="Digite seu nome" type="text"/>
+
+    <label for="email">📧 Email:</label>
+    <input id="email" placeholder="Digite seu e-mail" type="email"/>
+
+    <label for="senha">🔒 Senha:</label>
+    <input id="senha" placeholder="Digite sua senha" type="password"/>
+
+    <button onclick="cadastrarUsuario()">Cadastrar</button>
+</div>
+
+<script>
+    function cadastrarUsuario() {
+        const nome = document.getElementById("nome").value;
+        const email = document.getElementById("email").value;
+        const senha = document.getElementById("senha").value;
+
+        alert(`Usuário cadastrado com sucesso!\n\n👤 Nome: ${nome}\n📧 Email: ${email}`);
+        // Aqui depois você pode enviar via POST para o backend Java
+    }
+</script>
+</body>
+</html>
